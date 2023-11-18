@@ -35,7 +35,7 @@ export default class GPTHandler {
                 })
 
             const runResponse = await this.openai.post(`/threads/${this.threadId}/runs`, {
-                assistant_id: 'asst_n4DAs9EcIKylP1Udq0sPRPXp'
+                assistant_id: process.env.ASSISTANT_ID,
                 })
             const runId = runResponse.data.id
 
